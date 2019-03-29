@@ -72,11 +72,11 @@ function init() {
             };
       }
       document.onkeydown = selectLetter;
-
+      // Brings in an image in to change the direction of which way the user is typing
       var typeImage = document.getElementById("directionImg");
       typeImage.style.cursor = "pointer";
       typeImage.onclick = switchTypeDirection;
-
+      // Creations an anonymous function for showing errors, turning the text red
       document.getElementById("showErrors").onclick = function () {
             for (var i = 0; i < allLetters.length; i++) {
                   if (allLetters[i].textContent !== allLetters[i].dataset.letter) {
@@ -183,7 +183,6 @@ function switchTypeDirection() {
             currentLetter.style.backgroundColor = "rgb(191, 191, 255)";
       }
 }
-
 
 
 
